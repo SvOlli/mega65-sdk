@@ -14,6 +14,11 @@ install: install-cc65 install-m65dbg install-xemu
 clean:
 	@if [ "$(prefix)" = "$(CURDIR)/usr" ]; then echo "removing $(prefix)"; rm -rf "$(prefix)"; else echo "prefix=$(prefix), will not clean"; fi
 
+distclean: clean
+	make -C cc65 clean
+	make -C m65dbg clean
+	make -C xemu clean
+
 update:
 	git submodule init
 	git submodule update
@@ -32,7 +37,8 @@ all-m65dbg:
 	make -C m65dbg all
 
 install-m65dbg: all-m65dbg
-	make -C m65dbg install prefix=$(prefix)
+	install -D -s -m 0755 m65dbg/m65dbg $(prefix)/bin/m65dbg
+	@#make -C m65dbg install prefix=$(prefix)
 
 # xemu stuff
 
