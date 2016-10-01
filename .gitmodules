@@ -7,3 +7,6 @@
 [submodule "xemu"]
 	path = xemu
 	url = git://github.com/lgblgblgb/xemu.git
+[submodule "c65-specifications"]
+	path = c65-specifications
+	url = git://github.com/MEGA65/c65-specifications.git
