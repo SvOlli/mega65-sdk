@@ -2,7 +2,7 @@
 prefix ?= $(CURDIR)/usr
 runprefix ?= $(prefix)
 
-all: all-cc65 all-m65dsb all-xemu
+all: all-cc65 all-m65dsb all-xemu all-firmware
 
 prefix:
 	@echo $(prefix)
