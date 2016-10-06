@@ -10,3 +10,6 @@
 [submodule "c65-specifications"]
 	path = c65-specifications
 	url = git://github.com/MEGA65/c65-specifications.git
+[submodule "c65-firmware"]
+	path = c65-firmware
+	url = git://github.com/SvOlli/c65-firmware.git
